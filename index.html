@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WASI KHAN — Portfolio</title>
+
+  <!-- Google Fonts: Share Tech Mono + Rajdhani -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- =============================================
+       TERMINAL INTRO SCREEN
+  ============================================== -->
+  <div id="terminal-overlay">
+    <div id="terminal-window">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">WASI_KHAN.exe — Terminal</span>
+      </div>
+      <div class="terminal-body">
+        <div id="terminal-output"></div>
+        <div class="cursor-line">
+          <span class="prompt">root@portfolio:~$</span>
+          <span id="current-line"></span>
+          <span class="blink-cursor">█</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =============================================
+       STICKY NAVBAR
+  ============================================== -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="bracket">[</span>WASI<span class="accent">.</span>KHAN<span class="bracket">]</span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- =============================================
+       HERO SECTION
+  ============================================== -->
+  <section id="hero">
+    <!-- Animated grid background -->
+    <div class="hero-grid"></div>
+    <div class="hero-scanline"></div>
+    <!-- Glitch corners -->
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+
+    <div class="hero-content">
+      <p class="hero-status"><span class="status-dot"></span>ONLINE — READY TO DEPLOY</p>
+      <h1 class="hero-name glitch" data-text="WASI KHAN">WASI KHAN</h1>
+      <h2 class="hero-title">BS Computer Science Student</h2>
+      <p class="hero-tagline">
+        Aspiring Software Engineer<span class="sep">|</span>Systems Enthusiast<span class="sep">|</span>Web Developer
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <span>Contact Me</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Projects</span></div>
+      <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Languages</span></div>
+      <div class="stat"><span class="stat-num">1</span><span class="stat-label">Internship</span></div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       ABOUT SECTION
+  ============================================== -->
+  <section id="about" class="section fade-in-section">
+    <div class="section-header">
+      <span class="section-tag">// 01</span>
+      <h2 class="section-title">About <span class="accent">Me</span></h2>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-terminal">
+        <div class="mini-terminal-header">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span>profile.json</span>
+        </div>
+        <pre class="code-block"><code><span class="c-brace">{</span>
+  <span class="c-key">"name"</span>: <span class="c-str">"Wasi Khan"</span>,
+  <span class="c-key">"degree"</span>: <span class="c-str">"BS Computer Science"</span>,
+  <span class="c-key">"status"</span>: <span class="c-str">"Undergraduate Student"</span>,
+  <span class="c-key">"focus"</span>: [
+    <span class="c-str">"Operating Systems"</span>,
+    <span class="c-str">"Data Structures"</span>,
+    <span class="c-str">"Software Engineering"</span>
+  ],
+  <span class="c-key">"passion"</span>: <span class="c-str">"Low-level Systems &amp; Assembly"</span>,
+  <span class="c-key">"mindset"</span>: <span class="c-str">"Detail-Oriented"</span>,
+  <span class="c-key">"available"</span>: <span class="c-bool">true</span>
+<span class="c-brace">}</span></code></pre>
+      </div>
+
+      <div class="about-text">
+        <p>
+          I'm a <strong>BS Computer Science</strong> student with a deep interest in how computers work at a fundamental level. 
+          From implementing data structures in C++ to exploring memory management in operating systems, I enjoy understanding 
+          the machinery beneath the abstraction.
+        </p>
+        <p>
+          My academic journey has given me a strong foundation in <strong>Operating Systems, Data Structures, OOP, and Software Engineering</strong>. 
+          I'm particularly fascinated by <strong>Assembly language and low-level systems programming</strong> — the art of speaking directly to the machine.
+        </p>
+        <p>
+          Beyond coursework, I build real-world projects that solve actual problems. I value clean code, thoughtful architecture, 
+          and collaborative teamwork. I'm always looking to learn, contribute, and grow.
+        </p>
+        <div class="about-traits">
+          <span class="trait">⚡ Systems Thinker</span>
+          <span class="trait">🔧 Problem Solver</span>
+          <span class="trait">🤝 Team Player</span>
+          <span class="trait">📐 Detail-Oriented</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SKILLS SECTION
+  ============================================== -->
+  <section id="skills" class="section fade-in-section">
+    <div class="section-header">
+      <span class="section-tag">// 02</span>
+      <h2 class="section-title">Tech <span class="accent">Stack</span></h2>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="skills-grid">
+      <!-- Languages -->
+      <div class="skills-col">
+        <h3 class="skills-subtitle">Languages</h3>
+        <div class="skill-item">
+          <div class="skill-label"><span>C++</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>HTML</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>CSS</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>JavaScript</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+      </div>
+
+      <!-- Core Knowledge -->
+      <div class="skills-col">
+        <h3 class="skills-subtitle">Core Knowledge</h3>
+        <div class="skill-cards">
+          <div class="skill-card">
+            <div class="skill-icon">⚙️</div>
+            <span>Data Structures</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🖥️</div>
+            <span>Operating Systems</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🧩</div>
+            <span>OOP</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🗄️</div>
+            <span>PHP + MySQL</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🔩</div>
+            <span>Assembly</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🧪</div>
+            <span>Software Engineering</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       PROJECTS SECTION
+  ============================================== -->
+  <section id="projects" class="section fade-in-section">
+    <div class="section-header">
+      <span class="section-tag">// 03</span>
+      <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+      <div class="header-line"></div>
+    </div>
+
+    <!-- A) Static Featured Projects -->
+    <div class="featured-projects">
+      <div class="project-card">
+        <div class="project-badge">FEATURED</div>
+        <div class="project-number">01</div>
+        <h3 class="project-title">Mini Operating System</h3>
+        <p class="project-desc">
+          A custom mini OS built from scratch featuring basic process scheduling, 
+          memory management, and a simple file system. Demonstrates deep understanding 
+          of low-level systems programming.
+        </p>
+        <div class="project-tech">
+          <span>C</span><span>Assembly</span><span>x86</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="proj-btn github">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-btn demo">Live Demo →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-number">02</div>
+        <h3 class="project-title">Pharmacy Management System</h3>
+        <p class="project-desc">
+          A full-featured pharmacy management application in C++ using OOP principles. 
+          Handles inventory, sales records, customer data, and billing with a 
+          console-based UI.
+        </p>
+        <div class="project-tech">
+          <span>C++</span><span>OOP</span><span>File I/O</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="proj-btn github">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-btn demo">Live Demo →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-number">03</div>
+        <h3 class="project-title">Laptop E-Commerce Website</h3>
+        <p class="project-desc">
+          A fully functional e-commerce platform for laptops with product listing, 
+          cart system, user authentication, and admin panel. 
+          Built with PHP, MySQL, HTML, CSS, and JavaScript.
+        </p>
+        <div class="project-tech">
+          <span>HTML</span><span>CSS</span><span>JS</span><span>PHP</span><span>MySQL</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="proj-btn github">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-btn demo">Live Demo →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- B) Dynamic GitHub Repos -->
+    <div class="github-repos-section">
+      <h3 class="repos-title">
+        <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        Live GitHub Repos
+      </h3>
+      <div id="github-repos" class="repos-grid">
+        <div class="repo-loading">
+          <span class="loading-pulse"></span>
+          Fetching repositories...
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       EXPERIENCE SECTION
+  ============================================== -->
+  <section id="experience" class="section fade-in-section">
+    <div class="section-header">
+      <span class="section-tag">// 04</span>
+      <h2 class="section-title">Work <span class="accent">Experience</span></h2>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-connector"></div>
+        <div class="timeline-card">
+          <div class="timeline-meta">
+            <span class="job-badge">INTERN</span>
+            <span class="job-date">2024</span>
+          </div>
+          <h3 class="job-title">Quality Assurance Intern</h3>
+          <p class="job-company">Software Development Company</p>
+          <ul class="job-duties">
+            <li>Conducted thorough manual testing of web and desktop applications to identify UI, functional, and edge-case defects.</li>
+            <li>Designed and maintained detailed test cases aligned with business requirements and acceptance criteria.</li>
+            <li>Tracked and documented bugs using issue management tools with clear reproduction steps.</li>
+            <li>Collaborated closely with developers in agile sprint cycles to ensure quality delivery.</li>
+          </ul>
+          <div class="job-skills">
+            <span>Manual Testing</span>
+            <span>Test Cases</span>
+            <span>Bug Tracking</span>
+            <span>Agile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       CONTACT SECTION
+  ============================================== -->
+  <section id="contact" class="section fade-in-section">
+    <div class="section-header">
+      <span class="section-tag">// 05</span>
+      <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="contact-intro">
+          Available for internships, collaborations, and exciting opportunities. 
+          Let's build something remarkable together.
+        </p>
+        <a href="mailto:mwk0858@gmail.com" class="email-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          mwk0858@gmail.com
+        </a>
+
+        <div class="social-links">
+          <a href="https://github.com/Wasikhan0858" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/wasi-khan-840a95375" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name" />
+          <span class="form-error" id="nameError"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
+          <span class="form-error" id="emailError"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."></textarea>
+          <span class="form-error" id="messageError"></span>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">
+          <span>Send Message</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 19-7z"/></svg>
+        </button>
+        <div class="form-success" id="formSuccess">
+          ✓ Message sent successfully! I'll get back to you soon.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- =============================================
+       FOOTER
+  ============================================== -->
+  <footer>
+    <div class="footer-content">
+      <span class="footer-logo">[WK]</span>
+      <p>Designed &amp; Built by <span class="accent">Wasi Khan</span></p>
+      <p class="footer-copy">© 2025 — All systems operational.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
